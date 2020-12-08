@@ -1,0 +1,73 @@
+.footer {
+  height: 250px;
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  background: #577ada;
+  padding-top: 30px;
+}
+.text--disclousure {
+  background-color: red;
+}
+.companies {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  &__links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    padding-bottom: 10px;
+    border-bottom: 3px #fff solid;
+  }
+}
+//! Refactor Color
+.subscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__text {
+    font-weight: bold;
+    font-size: 35px;
+  }
+  &__form {
+    height: 55px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__input {
+    padding: 5px 10px;
+    width: 300px;
+    margin: 10px;
+    display: inline-block;
+    color: #3d3d3d;
+    border: none;
+    height: inherit;
+    border-radius: 10px;
+  }
+  //! revisar si se puede heredar de un btn general
+  &__btn {
+    height: inherit;
+    position: relative;
+    outline: none;
+    left: -40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #8d48b5;
+    color: inherit;
+    font-weight: bold;
+    padding: 0 25px;
+    cursor: pointer;
+  }
+}
+.logo-img {
+  width: 40px;
+  height: 40px;
+}

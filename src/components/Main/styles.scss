@@ -1,0 +1,76 @@
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1509062522246-3755977927d7');
+  background-repeat: no-repeat;
+  // object-fit: cover;
+  display: flex;
+  justify-content: flex-end;
+  background-position: center;
+  height: 80vh;
+  padding: 0 50px;
+  &__box {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+  &__call-action {
+    font-size: 25px;
+  }
+  &__main-text {
+    font-size: 60px;
+  }
+  &__btn {
+    text-align: center;
+    border: none;
+    color: inherit;
+    background: #8d48b5;
+    opacity: 0.85;
+    border-radius: 52px;
+    padding: 12px 30px;
+  }
+  span {
+    font-weight: bold;
+    color: #8d48b5;
+  }
+}
+
+.about-us {
+  color: #000;
+  font-size: 30px;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__img {
+    background-image: url('../assets/cody_hero.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 250px;
+    height: 150px;
+    top: -80px;
+    z-index: 2;
+  }
+  &__text-box {
+    text-align: center;
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+    padding: 70px 45px;
+    border: #8d48b5 8px solid;
+    border-radius: 30px;
+    &::after {
+      content: '';
+      top: -8px;
+      position: absolute;
+      z-index: 1;
+      height: 8px;
+      background: white;
+      left: 30%;
+      right: 30%;
+    }
+  }
+}
