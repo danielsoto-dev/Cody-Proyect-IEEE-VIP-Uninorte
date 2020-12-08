@@ -3,16 +3,19 @@ import './styles.scss';
 export default function Main() {
   return (
     <>
-      <section className='hero'>
-        <div className='hero__box'>
-          <p className='hero__call-action'>
-            Ven y explora el mundo de la programación por bloques
-          </p>
-          <p className='hero__main-text'>
-            ¡Aprende con Cody a programar <span>video juegos</span> de forma
-            divertida!
-          </p>
-          <button className='hero__btn'>Revisa el currículo</button>
+      <section>
+        <div className='hero'>
+          <div className='hero__filter-box'></div>
+          <div className='hero__box'>
+            <p className='hero__call-action'>
+              Ven y explora el mundo de la programación por bloques
+            </p>
+            <p className='hero__main-text'>
+              ¡Aprende con Cody a programar <span>video juegos</span> de forma
+              divertida!
+            </p>
+            <button className='hero__btn'>Revisa el currículo</button>
+          </div>
         </div>
       </section>
       <section className='about-us'>
