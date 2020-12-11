@@ -1,0 +1,25 @@
+@import '../../variables';
+$white-07: rgba(
+  $color: $white,
+  $alpha: 0.7,
+);
+.leader-card {
+  color: $grey;
+  font-size: 18px;
+  text-align: center;
+  width: 225px;
+  &__details {
+    padding: 15px 35px;
+    border-radius: $box-radius;
+    background-color: $white-07;
+    min-height: 290px;
+  }
+  &__name {
+    margin-bottom: 30px;
+  }
+  &__profile-pic {
+    margin: 0 auto 20px;
+    width: 130px;
+    height: 130px;
+  }
+}

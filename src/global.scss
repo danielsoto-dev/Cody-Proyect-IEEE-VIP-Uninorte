@@ -1,6 +1,16 @@
 @import './reset';
+@import './variables';
 
 body {
   color: #fff;
   font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+  margin-bottom: 200px;
+}
+
+.wrapped {
+  padding: 0 50px;
 }

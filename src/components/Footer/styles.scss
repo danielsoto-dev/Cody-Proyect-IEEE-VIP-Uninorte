@@ -1,8 +1,10 @@
+@import '../../variables';
+
 .footer {
   height: 250px;
   grid-template-columns: 1fr 1fr 1fr;
   display: grid;
-  background: #577ada;
+  background: $blue;
   padding-top: 30px;
 }
 .text--disclousure {
@@ -23,7 +25,7 @@
     align-items: center;
     width: 400px;
     padding-bottom: 10px;
-    border-bottom: 3px #fff solid;
+    border-bottom: 3px $white solid;
   }
 }
 //! Refactor Color
@@ -47,7 +49,7 @@
     width: 300px;
     margin: 10px;
     display: inline-block;
-    color: #3d3d3d;
+    color: $grey;
     border: none;
     height: inherit;
     border-radius: 10px;
@@ -60,7 +62,7 @@
     left: -40px;
     border: none;
     border-radius: 10px;
-    background-color: #8d48b5;
+    background-color: $purple;
     color: inherit;
     font-weight: bold;
     padding: 0 25px;
