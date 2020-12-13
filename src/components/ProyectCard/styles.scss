@@ -1,22 +1,24 @@
 @import '../../variables';
 
-.leader-card {
+.proyect-card {
   color: $grey;
   font-size: 18px;
   text-align: center;
   width: 225px;
-  &__details {
+
+  &__name {
     padding: 15px 35px;
     border-radius: $box-radius;
     background-color: $white-07;
-    min-height: 290px;
+    font-size: 25px;
+    margin-bottom: 20px;
   }
-  &__name {
-    margin-bottom: 30px;
-  }
-  &__profile-pic {
+  &__picture {
     margin: 0 auto 20px;
-    width: 130px;
-    height: 130px;
+    width: 256px;
+    height: 256px;
+  }
+  &__info {
+    font-size: 20px;
   }
 }

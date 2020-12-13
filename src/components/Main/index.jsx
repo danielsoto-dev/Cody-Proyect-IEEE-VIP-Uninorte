@@ -1,11 +1,15 @@
 import React from 'react';
 import './styles.scss';
 import LeaderCard from '../LeaderCard';
+import ProyectCard from '../ProyectCard';
+import Figure from '../Figure';
+import svg from '../assets/shape-hero.svg';
 export default function Main() {
   return (
     <>
+      <Figure></Figure>
       <section className='wrapped hero'>
-        <div className='hero__filter-box'></div>
+        <img src={svg} className='svg-hero' alt=''></img>
         <div className='hero__box'>
           <p className='hero__call-action'>
             Ven y explora el mundo de la <br /> programación por bloques.
@@ -42,7 +46,37 @@ export default function Main() {
           <LeaderCard info={{ name: 'Jimeno' }}></LeaderCard>
         </div>
       </section>
-      <section className='wrapped best-proyects'></section>
+      <section className='wrapped best-proyects'>
+        <div className='color-container'>
+          <p className='best-proyects__title'>
+            <span>Mejores</span> Proyectos
+          </p>
+          <p className='best-proyects__sub-title'>
+            Conoce los mejores proyectos desarrollados por los estudiantes
+            participantes del currículo:
+          </p>
+          <div className='proyects-box'>
+            <ProyectCard info={{ proyectName: 'CODY' }}></ProyectCard>
+            <ProyectCard info={{ proyectName: 'CyberPunk 2077' }}></ProyectCard>
+            <ProyectCard
+              info={{ proyectName: 'The Boring Company' }}
+            ></ProyectCard>
+          </div>
+        </div>
+      </section>
+      <section className='wrapped forum'>
+        <div className='forum__text-box'>
+          <div className='forum__title'>Foro</div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+            volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+            consequat
+          </p>
+          <button className='forum__btn'>Ingresa</button>
+        </div>
+      </section>
     </>
   );
 }

@@ -1,26 +1,22 @@
 @import '../../variables';
-$grey-07: rgba(
-  $color: $grey,
-  $alpha: 0.7,
-);
+
 .hero {
   position: relative;
-  padding: 300px 40px 50px 50px;
+  padding: 200px 250px 50px 50px;
   background-image: url('https://images.unsplash.com/photo-1509062522246-3755977927d7');
   background-repeat: no-repeat;
   display: flex;
   justify-content: flex-end;
   background-position: center;
-  height: 100vh;
+  height: 130vh;
   z-index: 0;
-  &__filter-box {
+
+  .svg-hero {
     position: absolute;
-    left: 0;
+    z-index: 1;
+    bottom: -1px;
     right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: $purple;
-    opacity: 0.1;
+    left: 0;
     z-index: 1;
   }
   &__box {
@@ -45,8 +41,7 @@ $grey-07: rgba(
     text-align: center;
     border: none;
     color: inherit;
-    background: $purple;
-    opacity: 0.7;
+    background: $purple-07;
     border-radius: 50px;
     padding: 12px 30px;
   }
@@ -118,12 +113,94 @@ $grey-07: rgba(
     margin-bottom: 20px;
   }
   .leaders-box {
-    background-color: $grey-07;
-    display: flex;
-    justify-content: space-evenly;
     align-items: center;
+    background-color: $grey-07;
     border-radius: $box-radius;
-    width: 900px;
+    display: flex;
     height: 560px;
+    justify-content: space-evenly;
+    width: 900px;
+  }
+}
+
+.best-proyects {
+  text-align: center;
+  &__title {
+    font-size: 65px;
+    span {
+      background-color: white;
+      border-radius: $box-radius;
+      padding: 5px 15px;
+      color: $grey;
+    }
+  }
+  &__sub-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .color-container {
+    background-color: $blue-05;
+    border-radius: 0 $box-radius $box-radius 0;
+
+    width: 1380px;
+    height: 810px;
+  }
+  .proyects-box {
+    align-items: center;
+    display: flex;
+    height: auto;
+    justify-content: space-evenly;
+  }
+}
+
+// TODO See if the border stuff can be a component that inyect the styles.
+.forum {
+  color: $black;
+  font-size: 30px;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__title {
+    color: $purple;
+    font-size: 70px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 250px;
+    height: 150px;
+    top: -80px;
+    z-index: 2;
+  }
+  &__text-box {
+    text-align: center;
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+    padding: 70px 45px;
+    border: $purple 8px solid;
+    border-radius: $box-radius;
+    &::after {
+      content: '';
+      top: -8px;
+      position: absolute;
+      z-index: 1;
+      height: 8px;
+      background: white;
+      left: 32%;
+      right: 32%;
+    }
+  }
+  &__btn {
+    margin-top: 20px;
+    background: $purple;
+    border-radius: 50px;
+    border: none;
+    color: inherit;
+    color: white;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 12px 30px;
+    text-align: center;
   }
 }

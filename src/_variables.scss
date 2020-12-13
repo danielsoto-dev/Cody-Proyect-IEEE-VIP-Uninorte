@@ -4,5 +4,20 @@ $white: #ffffff;
 $purple: #8d48b5;
 $black: #000000;
 // TO-DO create Mixin hex color, and opacity.
-
+$white-07: rgba(
+  $color: $white,
+  $alpha: 0.7,
+);
+$grey-07: rgba(
+  $color: $grey,
+  $alpha: 0.7,
+);
+$blue-05: rgba(
+  $color: $blue,
+  $alpha: 0.5,
+);
+$purple-07: rgba(
+  $color: $purple,
+  $alpha: 0.7,
+);
 $box-radius: 20px;

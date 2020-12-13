@@ -1,14 +1,19 @@
 import React from 'react';
 import Link from '../Link';
+import IEEELogo from '../assets/ieee-logo.svg';
+import uninorteLogo from '../assets/uninorte-logo.svg';
 import './styles.scss';
 export default function Footer() {
   return (
     <div className='footer'>
       <div className='companies'>
-        <div className='logo-img'></div>
-        <div className='logo-img'></div>
-        <div className='logo-img'></div>
-        <p className='text--disclousure'>2020 CODY All rights Reserved</p>
+        <img src={IEEELogo} className='logo-img' alt='IEEE Logo'></img>
+        <img
+          src={uninorteLogo}
+          className='logo-img'
+          alt='Universidad Del Norte Logo'
+        ></img>
+        <p className='text--disclousure'>©2020 CODY. All Rights Reserved</p>
       </div>
       <div className='nav-box'>
         <div className='nav-box__links'>
