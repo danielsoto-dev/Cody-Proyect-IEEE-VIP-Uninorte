@@ -1,0 +1,7 @@
+export { default as CodyHero } from './CodyHero'
+export { default as CodyLogo } from './CodyLogo'
+export { default as DefaultPp } from './DefaultPp'
+export { default as DefaultProyectIcon } from './DefaultProyectIcon'
+export { default as IeeeLogo } from './IeeeLogo'
+export { default as ShapeHero } from './ShapeHero'
+export { default as UninorteLogo } from './UninorteLogo'

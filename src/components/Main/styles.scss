@@ -10,15 +10,14 @@
   background-position: center;
   height: 130vh;
   z-index: 0;
-
   .svg-hero {
     position: absolute;
-    z-index: 1;
     bottom: -1px;
     right: 0;
     left: 0;
     z-index: 1;
   }
+
   &__box {
     position: relative;
     max-width: 850px;
@@ -53,16 +52,28 @@
 
 // Todo considerar herencia de estilo del borde raro ese
 .about-us {
+  position: relative;
   color: $black;
   font-size: 30px;
   height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  .purple-about-us {
+    height: 300px;
+    position: absolute;
+    z-index: 0;
+    top: -300px;
+    left: 0;
+  }
+  .right-strokes {
+    position: absolute;
+    z-index: -1;
+    top: -800px;
+    right: -30px;
+    height: 1200px;
+  }
   &__img {
-    background-image: url('../assets/cody_hero.svg');
-    background-repeat: no-repeat;
-    background-position: center;
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
@@ -93,12 +104,28 @@
 }
 
 .proyect-leaders {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: $grey-07;
-
+  position: relative;
+  .purple-leaders {
+    position: absolute;
+    height: 1300px;
+    z-index: -1;
+  }
+  .blue-leaders {
+    position: absolute;
+    height: 700px;
+    z-index: -1;
+  }
+  .diamond-leaders {
+    opacity: 0.5;
+    position: absolute;
+    height: 1200px;
+    z-index: -1;
+  }
   &__title {
     font-size: 65px;
     span {
@@ -125,6 +152,14 @@
 
 .best-proyects {
   text-align: center;
+  position: relative;
+  .shapes-proyects {
+    position: absolute;
+    z-index: -1;
+    height: 800px;
+    left: 100px;
+    top: 50px;
+  }
   &__title {
     font-size: 65px;
     span {
@@ -155,12 +190,34 @@
 
 // TODO See if the border stuff can be a component that inyect the styles.
 .forum {
+  position: relative;
   color: $black;
   font-size: 30px;
   height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  .left-forum {
+    position: absolute;
+    z-index: -1;
+    height: 400px;
+    left: 100px;
+    top: 200px;
+  }
+  .right-forum {
+    position: absolute;
+    z-index: -1;
+    height: 400px;
+    right: 300px;
+    top: -80px;
+  }
+  .bottom-strokes {
+    position: absolute;
+    z-index: -1;
+    height: 1500px;
+    right: -100px;
+    top: -700px;
+  }
   &__title {
     color: $purple;
     font-size: 70px;
@@ -175,7 +232,7 @@
   &__text-box {
     text-align: center;
     position: relative;
-    width: 960px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 70px 45px;
     border: $purple 8px solid;
