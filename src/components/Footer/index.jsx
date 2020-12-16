@@ -17,10 +17,11 @@ export default function Footer() {
       </div>
       <div className='nav-box'>
         <div className='nav-box__links'>
-          <Link>Home</Link>
-          <Link>Acerca</Link>
-          <Link>Currículo</Link>
-          <Link>Foro</Link>
+          <Link href='#home'>Home</Link>
+          <Link href='#about-us'>Acerca</Link>
+          <Link href='#proyect-leaders'>Lideres</Link>
+          <Link href='#best-proyects'>Proyectos</Link>
+          <Link href='#forum'>Foro</Link>
         </div>
       </div>
       <div className='subscribe'>

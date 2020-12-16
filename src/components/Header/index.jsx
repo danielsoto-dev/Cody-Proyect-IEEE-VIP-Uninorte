@@ -5,7 +5,7 @@ import CodyLogo from '../IconsComponents/CodyLogo';
 
 export default function Header() {
   return (
-    <div className=' wrapped header'>
+    <div className='wrapped header'>
       <CodyLogo className='logo'></CodyLogo>
       <Nav className='navbar'></Nav>
     </div>

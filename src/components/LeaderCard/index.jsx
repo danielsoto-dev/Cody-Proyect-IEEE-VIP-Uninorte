@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles.scss';
-import defaultPhoto from '../../assets/default_pp.svg';
+import defaultPhoto from '../../assets/svg/default_pp.svg';
 export default function Nav({ info }) {
   let { name, img = defaultPhoto } = info;
   return (

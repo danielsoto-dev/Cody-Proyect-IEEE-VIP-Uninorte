@@ -1,0 +1,24 @@
+.slider-hero {
+  position: relative;
+  padding: 200px 250px 50px 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: flex-end;
+  height: 130vh;
+  z-index: 0;
+  &__btn {
+    cursor: pointer;
+    position: absolute;
+    z-index: 3;
+    width: 25px;
+    top: 30%;
+  }
+  .btn--left {
+    left: 20px;
+  }
+  .btn--right {
+    right: 20px;
+  }
+}
