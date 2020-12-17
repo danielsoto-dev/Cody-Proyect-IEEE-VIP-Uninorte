@@ -12,13 +12,19 @@
 }
 .companies {
   text-align: center;
-  margin: 0 auto;
   display: grid;
-  width: 100%;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   justify-content: center;
   align-items: center;
+  column-gap: 2rem;
+
+  .ieee-logo {
+    margin-left: auto;
+  }
+  .uninorte-logo {
+    margin-right: auto;
+  }
 }
 .nav-box {
   display: flex;
@@ -76,4 +82,19 @@
 }
 .logo-img {
   height: 40px;
+}
+
+@media (max-width: $footer-break) {
+  .footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+
+    .subscribe {
+      grid-row: 1 / span 1;
+    }
+    .nav-box {
+      display: none;
+    }
+  }
 }

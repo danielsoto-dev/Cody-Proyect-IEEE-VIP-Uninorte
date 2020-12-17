@@ -38,9 +38,9 @@ export default function Main({ sliderImages }) {
       </section>
       {/* Aquí está la sección de Acerca de Nosotros */}
       <section id='about-us' className='wrapped about-us'>
-        <img alt='' src={rightStrokes} className='right-strokes' />
-        <img alt='' src={purpleAboutUs} className='purple-about-us' />
+        {/* <img alt='' src={rightStrokes} className='right-strokes' /> */}
         <div className='about-us__text-box'>
+          <img alt='' src={purpleAboutUs} className='purple-about-us' />
           <img alt='' src={codySvg} className='about-us__img' />
           <p>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
@@ -88,11 +88,10 @@ export default function Main({ sliderImages }) {
         </div>
       </section>
       <section id='forum' className='wrapped forum'>
-        <img alt='' src={leftForum} className='left-forum' />
-        <img alt='' src={rightForum} className='right-forum' />
         <img alt='' src={bottomStrokes} className='bottom-strokes' />
-
         <div className='forum__text-box'>
+          <img alt='' src={leftForum} className='left-forum' />
+          <img alt='' src={rightForum} className='right-forum' />
           <div className='forum__title'>Foro</div>
           <p>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam

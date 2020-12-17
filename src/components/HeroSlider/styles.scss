@@ -3,7 +3,7 @@
   padding: 200px 250px 50px 50px;
   background-repeat: no-repeat;
   background-size: cover;
-
+  min-height: 1050px;
   display: flex;
   justify-content: flex-end;
   height: 130vh;
@@ -20,5 +20,11 @@
   }
   .btn--right {
     right: 20px;
+  }
+}
+
+@media (max-width: 980px) {
+  .slider-hero {
+    padding: 200px 75px;
   }
 }

@@ -9,7 +9,8 @@ export default function Nav({ info }) {
       <div className='leader-card__details'>
         <p className='leader-card__name'>{name}</p>
         <p className='leader-card__info'>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi nihil
+          eligendi tempora distinctio fugiat consequuntur possimus.
         </p>
       </div>
     </div>

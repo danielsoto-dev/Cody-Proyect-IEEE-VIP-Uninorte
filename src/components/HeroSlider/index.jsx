@@ -5,8 +5,6 @@ import LeftArrow from '../../assets/svg/left-arrow.svg';
 import RightArrow from '../../assets/svg/right-arrow.svg';
 
 export default function HeroSlider({ slides, autoPlayTime, children }) {
-  console.log('rendered');
-
   const [currentSlide, setCurrentSlide] = useState(0);
   const numberOfSlides = slides.length - 1;
   const nextSlide = () => {

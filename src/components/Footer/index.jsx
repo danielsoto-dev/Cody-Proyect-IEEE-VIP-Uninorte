@@ -7,12 +7,20 @@ export default function Footer() {
   return (
     <div className='footer'>
       <div className='companies'>
-        <IeeeLogo width='100%' className='logo-img' alt='IEEE Logo'></IeeeLogo>
-        <UninorteLogo
-          width='100%'
-          className='logo-img'
-          alt='Universidad Del Norte Logo'
-        ></UninorteLogo>
+        <div className='ieee-logo'>
+          <IeeeLogo
+            width='100%'
+            className='logo-img'
+            alt='IEEE Logo'
+          ></IeeeLogo>
+        </div>
+        <div className='uninorte-logo'>
+          <UninorteLogo
+            width='100%'
+            className='logo-img'
+            alt='Universidad Del Norte Logo'
+          ></UninorteLogo>
+        </div>
         <p className='text--disclousure'>©2020 CODY. All Rights Reserved</p>
       </div>
       <div className='nav-box'>
