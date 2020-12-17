@@ -1,4 +1,12 @@
 import React from 'react';
+import {
+  CarouselProvider,
+  Slider,
+  Slide,
+  ButtonBack,
+  ButtonNext,
+} from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 import './styles.scss';
 //Components
 import LeaderCard from '../LeaderCard';
@@ -19,6 +27,12 @@ import shapesProyects from '../../assets/svg/shapes-proyects.svg';
 
 export default function Main({ sliderImages }) {
   //TODO Mirar si se puede hacer para que las letras varien según el fondo
+  const handleDragStart = (e) => e.preventDefault();
+  const responsive = {
+    0: { items: 1 },
+    568: { items: 2 },
+    1024: { items: 3 },
+  };
   return (
     <>
       <section id='home' className=' hero'>
@@ -63,9 +77,22 @@ export default function Main({ sliderImages }) {
           Conoce a los líderes del proyecto
         </p>
         <div className='leaders-box'>
-          <LeaderCard info={{ name: 'Pedro' }}></LeaderCard>
-          <LeaderCard info={{ name: 'Augusto' }}></LeaderCard>
-          <LeaderCard info={{ name: 'Jimeno' }}></LeaderCard>
+          <AliceCarousel infinite='true' mouseTracking responsive={responsive}>
+            {[
+              <LeaderCard
+                onDragStart={handleDragStart}
+                info={{ name: 'Pedro' }}
+              ></LeaderCard>,
+              <LeaderCard
+                onDragStart={handleDragStart}
+                info={{ name: 'Augusto' }}
+              ></LeaderCard>,
+              <LeaderCard
+                onDragStart={handleDragStart}
+                info={{ name: 'Jimeno' }}
+              ></LeaderCard>,
+            ]}
+          </AliceCarousel>
         </div>
       </section>
       <section id='best-proyects' className='wrapped best-proyects'>
@@ -79,11 +106,26 @@ export default function Main({ sliderImages }) {
             participantes del currículo:
           </p>
           <div className='proyects-box'>
-            <ProyectCard info={{ proyectName: 'CODY' }}></ProyectCard>
-            <ProyectCard info={{ proyectName: 'CyberPunk 2077' }}></ProyectCard>
-            <ProyectCard
-              info={{ proyectName: 'The Boring Company' }}
-            ></ProyectCard>
+            <AliceCarousel
+              infinite='true'
+              mouseTracking
+              responsive={responsive}
+            >
+              {[
+                <ProyectCard
+                  onDragStart={handleDragStart}
+                  info={{ proyectName: 'CODY' }}
+                ></ProyectCard>,
+                <ProyectCard
+                  onDragStart={handleDragStart}
+                  info={{ proyectName: 'CyberPunk 2077' }}
+                ></ProyectCard>,
+                <ProyectCard
+                  onDragStart={handleDragStart}
+                  info={{ proyectName: 'The Boring Company' }}
+                ></ProyectCard>,
+              ]}
+            </AliceCarousel>
           </div>
         </div>
       </section>
