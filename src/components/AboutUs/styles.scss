@@ -1,0 +1,54 @@
+@import '../../variables';
+.about-us {
+  position: relative;
+  color: $black;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 300px;
+  .purple-about-us {
+    position: absolute;
+    height: 10em;
+    z-index: 0;
+    top: -350px;
+    left: -25%;
+  }
+  .right-strokes {
+    position: absolute;
+    z-index: -1;
+    top: -800px;
+    right: -30px;
+    height: 1200px;
+  }
+  &__img {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 250px;
+    height: 150px;
+    top: -80px;
+    z-index: 2;
+  }
+  &__text-box {
+    text-align: center;
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+    padding: 70px 45px;
+    border: $purple 8px solid;
+    border-radius: $box-radius;
+    &::after {
+      content: '';
+      top: -8px;
+      position: absolute;
+      z-index: 1;
+      height: 8px;
+      background: white;
+      left: 0;
+      right: 0;
+      max-width: 250px;
+      margin: 0 auto;
+    }
+  }
+}

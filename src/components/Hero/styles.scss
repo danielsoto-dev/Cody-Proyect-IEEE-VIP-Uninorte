@@ -1,0 +1,55 @@
+@import '../../variables';
+
+html {
+  font-size: 14px;
+}
+.hero {
+  position: relative;
+  z-index: 0;
+  margin-bottom: 0;
+  .svg-hero {
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  &__box {
+    position: relative;
+    max-width: 850px;
+    max-height: 616px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    z-index: 2;
+    text-align: right;
+  }
+  &__call-action {
+    font-size: 2rem;
+  }
+  &__main-text {
+    font-size: 4rem;
+  }
+  &__btn {
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    color: inherit;
+    background: $purple-07;
+    border-radius: 50px;
+    padding: 12px 30px;
+  }
+  span {
+    font-weight: bold;
+    color: $purple;
+  }
+}
+
+@media (max-width: 980px) {
+  .hero {
+    &__box {
+    }
+  }
+}

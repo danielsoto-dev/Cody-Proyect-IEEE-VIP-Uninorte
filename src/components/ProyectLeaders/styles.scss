@@ -1,0 +1,49 @@
+@import '../../variables';
+
+.proyect-leaders {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding-top: 100px;
+  .purple-leaders {
+    position: absolute;
+    height: 80rem;
+    z-index: -1;
+  }
+  .blue-leaders {
+    position: absolute;
+    height: 50rem;
+    z-index: -1;
+  }
+  .diamond-leaders {
+    opacity: 0.5;
+    position: absolute;
+    height: 70rem;
+    z-index: -1;
+  }
+  &__title {
+    font-size: 65px;
+    span {
+      background-color: white;
+      border-radius: $box-radius;
+      padding: 5px 15px;
+      color: $blue;
+    }
+  }
+  &__sub-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .leaders-box {
+    padding: 30px;
+    align-items: center;
+    background-color: $grey-07;
+    border-radius: $box-radius;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 900px;
+  }
+}

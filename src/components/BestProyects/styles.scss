@@ -1,0 +1,42 @@
+@import '../../variables';
+
+.best-proyects {
+  padding-top: 100px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 200;
+  .shapes-proyects {
+    position: absolute;
+    z-index: -1;
+    height: 50rem;
+    left: 100px;
+    top: 15%;
+  }
+  &__title {
+    font-size: 65px;
+    span {
+      background-color: white;
+      border-radius: $box-radius;
+      padding: 5px 15px;
+      color: $grey;
+    }
+  }
+  &__sub-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .color-container {
+    background-color: $blue-05;
+    border-radius: 0 $box-radius $box-radius 0;
+
+    width: 1380px;
+    height: 810px;
+  }
+  .proyects-box {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    height: 600px;
+    width: 100%;
+  }
+}
