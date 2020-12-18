@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Slide from '../Slide';
 import './styles.scss';
 import LeftArrow from '../../assets/svg/left-arrow.svg';
 import RightArrow from '../../assets/svg/right-arrow.svg';

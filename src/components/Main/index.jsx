@@ -6,8 +6,15 @@ import {
   ButtonBack,
   ButtonNext,
 } from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
 import './styles.scss';
+//Information
+import leaders from '../../utils/leaders';
+import proyects from '../../utils/proyects';
+
+//Styles
+import 'pure-react-carousel/dist/react-carousel.es.css';
+import LeftArrow from '../../assets/svg/left-arrow.svg';
+import RightArrow from '../../assets/svg/right-arrow.svg';
 //Components
 import LeaderCard from '../LeaderCard';
 import ProyectCard from '../ProyectCard';
@@ -21,18 +28,12 @@ import leftForum from '../../assets/svg/left-forum.svg';
 import purpleAboutUs from '../../assets/svg/purple-about-us.svg';
 import purpleLeaders from '../../assets/svg/purple-leaders.svg';
 import rightForum from '../../assets/svg/right-forum.svg';
-import rightStrokes from '../../assets/svg/right-strokes.svg';
 import shapeHero from '../../assets/svg/shape-hero.svg';
 import shapesProyects from '../../assets/svg/shapes-proyects.svg';
 
 export default function Main({ sliderImages }) {
   //TODO Mirar si se puede hacer para que las letras varien según el fondo
-  const handleDragStart = (e) => e.preventDefault();
-  const responsive = {
-    0: { items: 1 },
-    568: { items: 2 },
-    1024: { items: 3 },
-  };
+
   return (
     <>
       <section id='home' className=' hero'>
@@ -77,22 +78,31 @@ export default function Main({ sliderImages }) {
           Conoce a los líderes del proyecto
         </p>
         <div className='leaders-box'>
-          <AliceCarousel infinite='true' mouseTracking responsive={responsive}>
-            {[
-              <LeaderCard
-                onDragStart={handleDragStart}
-                info={{ name: 'Pedro' }}
-              ></LeaderCard>,
-              <LeaderCard
-                onDragStart={handleDragStart}
-                info={{ name: 'Augusto' }}
-              ></LeaderCard>,
-              <LeaderCard
-                onDragStart={handleDragStart}
-                info={{ name: 'Jimeno' }}
-              ></LeaderCard>,
-            ]}
-          </AliceCarousel>
+          <CarouselProvider
+            step={2}
+            naturalSlideWidth={225}
+            naturalSlideHeight={386}
+            visibleSlides={3}
+            totalSlides={6}
+          >
+            <Slider className='slider'>
+              {leaders.map(({ name, details, id }) => {
+                return (
+                  <Slide key={id} className='slide' index={id}>
+                    <LeaderCard info={{ name, details }}></LeaderCard>
+                  </Slide>
+                );
+              })}
+            </Slider>
+            <div className='btns-slider-container'>
+              <ButtonBack className='btn-slider'>
+                <img alt='' src={LeftArrow} />
+              </ButtonBack>
+              <ButtonNext className='btn-slider'>
+                <img alt='' src={RightArrow} />
+              </ButtonNext>
+            </div>
+          </CarouselProvider>
         </div>
       </section>
       <section id='best-proyects' className='wrapped best-proyects'>
@@ -106,26 +116,31 @@ export default function Main({ sliderImages }) {
             participantes del currículo:
           </p>
           <div className='proyects-box'>
-            <AliceCarousel
-              infinite='true'
-              mouseTracking
-              responsive={responsive}
+            <CarouselProvider
+              step={2}
+              naturalSlideWidth={700}
+              naturalSlideHeight={700}
+              visibleSlides={3}
+              totalSlides={4}
             >
-              {[
-                <ProyectCard
-                  onDragStart={handleDragStart}
-                  info={{ proyectName: 'CODY' }}
-                ></ProyectCard>,
-                <ProyectCard
-                  onDragStart={handleDragStart}
-                  info={{ proyectName: 'CyberPunk 2077' }}
-                ></ProyectCard>,
-                <ProyectCard
-                  onDragStart={handleDragStart}
-                  info={{ proyectName: 'The Boring Company' }}
-                ></ProyectCard>,
-              ]}
-            </AliceCarousel>
+              <Slider className='slider'>
+                {proyects.map(({ name, details, id }) => {
+                  return (
+                    <Slide key={id} className='slide' index={id}>
+                      <ProyectCard info={{ name, details }}></ProyectCard>
+                    </Slide>
+                  );
+                })}
+              </Slider>
+              <div className='btns-slider-container'>
+                <ButtonBack className='btn-slider'>
+                  <img alt='' src={LeftArrow} />
+                </ButtonBack>
+                <ButtonNext className='btn-slider'>
+                  <img alt='' src={RightArrow} />
+                </ButtonNext>
+              </div>
+            </CarouselProvider>
           </div>
         </div>
       </section>

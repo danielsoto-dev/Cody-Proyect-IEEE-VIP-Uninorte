@@ -1,11 +1,37 @@
 @import '../../variables';
 
-// .alice-carousel__stage {
-//   margin: 0 auto !important;
-// }
-// .alice-carousel__stage-item {
-//   margin: 0 auto !important;
-// }
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: inherit;
+  height: inherit;
+}
+.slider {
+  width: inherit;
+  height: inherit;
+  .slide {
+    width: inherit;
+    height: inherit;
+  }
+}
+.btns-slider-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  .btn-slider {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: inherit;
+    width: 40px;
+    height: auto;
+  }
+}
 
 .hero {
   position: relative;
@@ -105,8 +131,10 @@
       z-index: 1;
       height: 8px;
       background: white;
-      left: 32%;
-      right: 32%;
+      left: 0;
+      right: 0;
+      max-width: 250px;
+      margin: 0 auto;
     }
   }
 }
@@ -148,13 +176,14 @@
     margin-bottom: 20px;
   }
   .leaders-box {
+    padding: 30px;
     align-items: center;
     background-color: $grey-07;
     border-radius: $box-radius;
     display: flex;
-    height: 560px;
     justify-content: space-evenly;
-    width: 900px;
+    width: 100%;
+    max-width: 900px;
   }
 }
 
@@ -193,8 +222,9 @@
   .proyects-box {
     align-items: center;
     display: flex;
-    height: auto;
     justify-content: space-evenly;
+    height: 600px;
+    width: 100%;
   }
 }
 
@@ -254,8 +284,10 @@
       z-index: 1;
       height: 8px;
       background: white;
-      left: 32%;
-      right: 32%;
+      left: 0;
+      right: 0;
+      max-width: 250px;
+      margin: 0 auto;
     }
   }
   &__btn {
