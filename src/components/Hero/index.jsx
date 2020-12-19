@@ -10,10 +10,11 @@ export default function Hero({ sliderImages }) {
         <img alt='' src={shapeHero} className='svg-hero' />
         <div className='hero__box'>
           <p className='hero__call-action'>
-            Ven y explora el mundo de la <br /> programación por bloques.
+            Ven y explora el mundo de la <br className='br' /> programación por
+            bloques.
           </p>
           <p className='hero__main-text'>
-            ¡Aprende con Cody a programar <span>video juegos</span> de forma
+            ¡Aprende con Cody a programar <span>videojuegos</span> de forma
             divertida!
           </p>
           <button className='hero__btn'>Revisa el currículo</button>

@@ -6,14 +6,14 @@
   min-height: 1050px;
   display: flex;
   justify-content: flex-end;
-  height: 130vh;
+  height: 65vw;
   z-index: 0;
   &__btn {
     cursor: pointer;
     position: absolute;
     z-index: 3;
-    width: 25px;
-    top: 30%;
+    width: 1.75vw;
+    top: 40%;
   }
   .btn--left {
     left: 20px;
@@ -23,8 +23,14 @@
   }
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1200px) {
   .slider-hero {
     padding: 200px 75px;
+  }
+}
+
+@media (max-width: 700px) {
+  .slider-hero__btn {
+    top: 45%;
   }
 }

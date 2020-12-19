@@ -3,3 +3,9 @@
   width: 420px;
   justify-content: space-between;
 }
+
+@media (max-width: 700px) {
+  .nav {
+    display: none;
+  }
+}

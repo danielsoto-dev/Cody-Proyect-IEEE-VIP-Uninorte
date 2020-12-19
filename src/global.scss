@@ -18,3 +18,9 @@ section {
 .wrapped {
   padding: 0 1rem;
 }
+
+@media (max-width: 980px) {
+  html {
+    font-size: 14px;
+  }
+}
