@@ -50,3 +50,14 @@
     width: 100%;
   }
 }
+
+@media (max-width: 1120px) {
+  .proyect-leaders {
+    .blue-leaders {
+      display: none;
+    }
+    .purple-leaders {
+      display: none;
+    }
+  }
+}

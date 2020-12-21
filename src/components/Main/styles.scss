@@ -38,3 +38,16 @@
     height: 100%;
   }
 }
+@media (max-width: 700px) {
+  .btns-slider-container {
+    .btn-slider {
+      width: 7vw;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .btns-slider-container {
+    display: none;
+  }
+}

@@ -27,7 +27,7 @@
   .color-container {
     background-color: $blue-05;
     border-radius: 0 $box-radius $box-radius 0;
-    padding: 20px 0;
+    padding: 1.5rem;
     max-width: 1380px;
     height: 810px;
   }
@@ -37,5 +37,11 @@
     justify-content: space-evenly;
     height: 600px;
     width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .best-proyects {
+    padding-inline: 0;
   }
 }

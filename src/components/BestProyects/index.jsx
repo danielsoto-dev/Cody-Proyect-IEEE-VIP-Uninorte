@@ -35,7 +35,7 @@ export default function BestProyects({ screenSize: { width } }) {
         </p>
         <div className='proyects-box'>
           <CarouselProvider
-            step={2}
+            step={1}
             naturalSlideWidth={700}
             naturalSlideHeight={height}
             visibleSlides={numOfSlides}

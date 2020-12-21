@@ -5,7 +5,7 @@ import UninorteLogo from '../IconsComponents/UninorteLogo';
 import './styles.scss';
 export default function Footer() {
   return (
-    <div className='footer'>
+    <div className='footer wrapper'>
       <div className='companies'>
         <div className='ieee-logo'>
           <IeeeLogo

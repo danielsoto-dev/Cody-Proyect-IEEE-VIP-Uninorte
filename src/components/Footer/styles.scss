@@ -5,7 +5,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   display: grid;
   background: $blue;
-  padding-top: 30px;
+  padding: 30px 1rem 1rem 0;
 }
 .text--disclousure {
   grid-column: 1/3;
@@ -57,17 +57,15 @@
   }
   &__input {
     padding: 0.25rem 0.5rem;
-    width: 300px;
+    max-width: 300px;
     margin: 10px;
     display: inline-block;
     color: $grey;
     border: none;
-    height: 100%;
     border-radius: 10px;
   }
   //! revisar si se puede heredar de un btn general
   &__btn {
-    height: 100%;
     position: relative;
     outline: none;
     left: -40px;
