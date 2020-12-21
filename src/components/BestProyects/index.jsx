@@ -13,7 +13,15 @@ import LeftArrow from '../../assets/svg/left-arrow.svg';
 import RightArrow from '../../assets/svg/right-arrow.svg';
 import ProyectCard from '../ProyectCard';
 import shapesProyects from '../../assets/svg/shapes-proyects.svg';
-export default function BestProyects() {
+export default function BestProyects({ screenSize: { width } }) {
+  let height = 366;
+  let numOfSlides = 3;
+  if (width < 830) {
+    numOfSlides = 2;
+    if (width < 580) {
+      numOfSlides = 1;
+    }
+  }
   return (
     <section id='best-proyects' className='wrapped best-proyects'>
       <img alt='' src={shapesProyects} className='shapes-proyects' />
@@ -29,9 +37,9 @@ export default function BestProyects() {
           <CarouselProvider
             step={2}
             naturalSlideWidth={700}
-            naturalSlideHeight={700}
-            visibleSlides={3}
-            totalSlides={4}
+            naturalSlideHeight={height}
+            visibleSlides={numOfSlides}
+            totalSlides={proyects.length}
           >
             <Slider className='slider'>
               {proyects.map(({ name, details, id }) => {

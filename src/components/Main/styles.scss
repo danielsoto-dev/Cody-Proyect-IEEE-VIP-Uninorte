@@ -1,26 +1,22 @@
 @import '../../variables';
 
 .carousel {
+  position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: inherit;
-  height: inherit;
+  width: 100%;
+  height: 550px;
+  justify-content: space-between;
 }
-.slider {
-  width: inherit;
-  height: inherit;
-  .slide {
-    width: inherit;
-    height: inherit;
-  }
-}
+
 .btns-slider-container {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 50%;
+  z-index: 2;
   .btn-slider {
     background: none;
     color: inherit;
@@ -28,7 +24,17 @@
     padding: 0;
     cursor: pointer;
     outline: inherit;
-    width: 40px;
+    width: 2.3vw;
     height: auto;
+  }
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  margin-bottom: -120px;
+  .slide {
+    width: 100%;
+    height: 100%;
   }
 }

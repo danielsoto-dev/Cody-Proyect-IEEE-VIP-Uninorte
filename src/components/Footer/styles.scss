@@ -47,27 +47,27 @@
   flex-direction: column;
   &__text {
     font-weight: bold;
-    font-size: 35px;
+    font-size: 1.75rem;
   }
   &__form {
-    height: 55px;
+    height: 2.75rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
   }
   &__input {
-    padding: 5px 10px;
+    padding: 0.25rem 0.5rem;
     width: 300px;
     margin: 10px;
     display: inline-block;
     color: $grey;
     border: none;
-    height: inherit;
+    height: 100%;
     border-radius: 10px;
   }
   //! revisar si se puede heredar de un btn general
   &__btn {
-    height: inherit;
+    height: 100%;
     position: relative;
     outline: none;
     left: -40px;
@@ -76,7 +76,8 @@
     background-color: $purple;
     color: inherit;
     font-weight: bold;
-    padding: 0 25px;
+    padding: 0.25rem 25px;
+    // padding: 0.25rem 0.5rem;
     cursor: pointer;
   }
 }

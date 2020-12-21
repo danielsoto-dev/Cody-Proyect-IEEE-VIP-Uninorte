@@ -3,7 +3,7 @@
 .forum {
   position: relative;
   color: $black;
-  font-size: 30px;
+  font-size: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,13 +31,15 @@
   }
   &__title {
     color: $purple;
-    font-size: 70px;
+    font-size: 3.25rem;
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 250px;
-    height: 150px;
-    top: -80px;
+    left: 0;
+    right: 0;
+    top: -15%;
+    // left: 50%;
+    // transform: translate(-50%, 0);
+    // top: -80px;
+    margin: 0 auto;
     z-index: 2;
   }
   &__text-box {
@@ -69,7 +71,7 @@
     color: inherit;
     color: white;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 1.5rem;
     padding: 12px 30px;
     text-align: center;
   }

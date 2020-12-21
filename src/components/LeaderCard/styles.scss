@@ -2,7 +2,7 @@
 
 .leader-card {
   color: $grey;
-  font-size: 18px;
+  font-size: 0.9rem;
   text-align: center;
   margin: 0 auto;
   width: 225px;
@@ -13,6 +13,8 @@
     min-height: 290px;
   }
   &__name {
+    font-size: 1.1rem;
+    font-weight: bold;
     margin-bottom: 30px;
   }
   &__profile-pic {

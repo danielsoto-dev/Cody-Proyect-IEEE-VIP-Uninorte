@@ -15,7 +15,15 @@ import diamondSvg from '../../assets/svg/diamond-leaders.svg';
 import LeaderCard from '../LeaderCard';
 import leaders from '../../utils/leaders';
 import purpleLeaders from '../../assets/svg/purple-leaders.svg';
-export default function ProyectLeaders() {
+export default function ProyectLeaders({ screenSize: { width } }) {
+  let height = 440;
+  let numOfSlides = 3;
+  if (width < 830) {
+    numOfSlides = 2;
+    if (width < 580) {
+      numOfSlides = 1;
+    }
+  }
   return (
     <section id='proyect-leaders' className='wrapped proyect-leaders'>
       {/* //TODO Fix rigth gap */}
@@ -30,13 +38,13 @@ export default function ProyectLeaders() {
       </p>
       <div className='leaders-box'>
         <CarouselProvider
-          step={2}
+          step={1}
           naturalSlideWidth={225}
-          naturalSlideHeight={386}
-          visibleSlides={3}
-          totalSlides={6}
+          naturalSlideHeight={height}
+          visibleSlides={numOfSlides}
+          totalSlides={leaders.length}
         >
-          <Slider className='slider'>
+          <Slider className='slider' style={{ height }}>
             {leaders.map(({ name, details, id }) => {
               return (
                 <Slide key={id} className='slide' index={id}>

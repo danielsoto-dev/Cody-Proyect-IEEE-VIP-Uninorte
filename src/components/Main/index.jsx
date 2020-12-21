@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { useWindowSize } from '../../hooks/useWindowSize';
 import './styles.scss';
 //Information
 
@@ -15,12 +16,13 @@ import BestProyects from '../BestProyects';
 import Forum from '../Forum';
 
 export default function Main({ sliderImages }) {
+  const size = useWindowSize();
   return (
     <>
       <Hero sliderImages={sliderImages}></Hero>
       <AboutUs></AboutUs>
-      <ProyectLeaders></ProyectLeaders>
-      <BestProyects></BestProyects>
+      <ProyectLeaders screenSize={size}></ProyectLeaders>
+      <BestProyects screenSize={size}></BestProyects>
       <Forum></Forum>
     </>
   );
