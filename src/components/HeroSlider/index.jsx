@@ -8,14 +8,14 @@ export default function HeroSlider({ slides, autoPlayTime, children }) {
   const numberOfSlides = slides.length - 1;
   const nextSlide = () => {
     if (currentSlide !== numberOfSlides) {
-      setCurrentSlide(currentSlide + 1);
+      setCurrentSlide((cS) => cS + 1);
     } else {
       setCurrentSlide(0);
     }
   };
   const prevSlide = () => {
     if (currentSlide !== 0) {
-      setCurrentSlide(currentSlide - 1);
+      setCurrentSlide((cS) => cS - 1);
     } else {
       setCurrentSlide(numberOfSlides);
     }

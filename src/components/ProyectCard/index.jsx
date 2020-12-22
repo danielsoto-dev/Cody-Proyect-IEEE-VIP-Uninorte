@@ -6,7 +6,6 @@ export default function Nav({ info }) {
   if (!img) img = defaultPhoto;
   if (!details) details = 'Proximamente';
 
-  console.log(details);
   return (
     <div className='proyect-card'>
       <img className='proyect-card__picture' src={img} alt='Profile' />
