@@ -1,14 +1,29 @@
+@import '../../variables';
 .slider-hero {
   position: relative;
   padding: 200px 250px 50px 50px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   min-height: 1050px;
   display: flex;
   justify-content: flex-end;
   height: 65vw;
   z-index: 0;
+
+  .slide {
+    opacity: 0;
+  }
+  .slide.active {
+    transition: 100ms ease;
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+    height: 100%;
+    width: 100%;
+
+    opacity: 1;
+  }
   &__btn {
     cursor: pointer;
     position: absolute;
