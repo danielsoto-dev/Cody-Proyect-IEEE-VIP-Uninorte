@@ -21,13 +21,20 @@ export default function HeroSlider({ slides, autoPlayTime, children }) {
     }
   };
   useEffect(() => {
+    const nextSlide = () => {
+      if (currentSlide !== numberOfSlides) {
+        setCurrentSlide((cS) => cS + 1);
+      } else {
+        setCurrentSlide(0);
+      }
+    };
     if (autoPlayTime) {
       const interval = setInterval(nextSlide, autoPlayTime * 1000);
       return () => {
         clearInterval(interval);
       };
     }
-  }, [currentSlide, autoPlayTime]);
+  }, [numberOfSlides, currentSlide, autoPlayTime]);
 
   return (
     <div className='slider-hero'>
