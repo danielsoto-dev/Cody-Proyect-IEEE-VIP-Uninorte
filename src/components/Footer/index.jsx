@@ -42,7 +42,14 @@ export default function Footer() {
               type='text'
             />
           </label>
-          <button className='subscribe__btn'>Enviar</button>
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+            }}
+            className='subscribe__btn'
+          >
+            Enviar
+          </button>
         </form>
       </div>
     </div>

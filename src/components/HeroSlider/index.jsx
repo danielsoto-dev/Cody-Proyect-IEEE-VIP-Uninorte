@@ -4,7 +4,6 @@ import LeftArrow from '../../assets/svg/left-arrow.svg';
 import RightArrow from '../../assets/svg/right-arrow.svg';
 
 export default function HeroSlider({ slides, autoPlayTime, children }) {
-  console.log({ slides });
   const [currentSlide, setCurrentSlide] = useState(0);
   const numberOfSlides = slides.length - 1;
   const nextSlide = () => {
@@ -32,9 +31,10 @@ export default function HeroSlider({ slides, autoPlayTime, children }) {
 
   return (
     <div className='slider-hero'>
-      {slides.map(({ src }, idx) => {
+      {slides.map(({ src, id }, idx) => {
         return (
           <div
+            key={id}
             style={{ backgroundImage: 'url(' + src + ')' }}
             className={`slide ${idx === currentSlide ? 'active' : ''}`}
           ></div>

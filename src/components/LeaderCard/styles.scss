@@ -18,6 +18,10 @@
     margin-bottom: 30px;
   }
   &__profile-pic {
+    border-radius: 50%;
+    object-fit: cover;
+    background-position: center;
+    overflow: hidden;
     margin: 0 auto 20px;
     width: 130px;
     height: 130px;

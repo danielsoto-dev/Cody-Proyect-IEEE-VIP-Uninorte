@@ -42,10 +42,11 @@ export default function BestProyects({ screenSize: { width } }) {
             totalSlides={proyects.length}
           >
             <Slider className='slider'>
-              {proyects.map(({ name, details, id }) => {
+              {proyects.map(({ id, ...rest }) => {
+                console.log('rest', rest);
                 return (
                   <Slide key={id} className='slide' index={id}>
-                    <ProyectCard info={{ name, details }}></ProyectCard>
+                    <ProyectCard info={rest}></ProyectCard>
                   </Slide>
                 );
               })}

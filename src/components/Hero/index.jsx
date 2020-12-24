@@ -2,7 +2,7 @@ import React from 'react';
 import './styles.scss';
 import HeroSlider from '../HeroSlider';
 import shapeHero from '../../assets/svg/shape-hero.svg';
-
+import Link from '../Link';
 export default function Hero({ sliderImages }) {
   return (
     <section id='home' className=' hero'>
@@ -17,7 +17,7 @@ export default function Hero({ sliderImages }) {
             ¡Aprende con Cody a programar <span>videojuegos</span> de forma
             divertida!
           </p>
-          <button className='hero__btn'>Revisa el currículo</button>
+          <Link className='hero__btn'>Revisa el currículo</Link>
         </div>
       </HeroSlider>
     </section>

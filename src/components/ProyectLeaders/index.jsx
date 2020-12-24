@@ -45,10 +45,10 @@ export default function ProyectLeaders({ screenSize: { width } }) {
           totalSlides={leaders.length}
         >
           <Slider className='slider' style={{ height }}>
-            {leaders.map(({ name, details, id }) => {
+            {leaders.map(({ id, ...rest }) => {
               return (
                 <Slide key={id} className='slide' index={id}>
-                  <LeaderCard info={{ name, details }}></LeaderCard>
+                  <LeaderCard info={rest}></LeaderCard>
                 </Slide>
               );
             })}

@@ -38,11 +38,12 @@
     }
   }
   &__btn {
+    display: block;
     cursor: pointer;
     text-align: center;
     border: none;
     color: inherit;
-    background: $purple-07;
+    background-color: $purple-07;
     border-radius: 50px;
     padding: 12px 30px;
   }
