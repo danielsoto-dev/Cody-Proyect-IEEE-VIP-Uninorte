@@ -12,8 +12,7 @@ export default function Forum() {
         <img alt='' src={rightForum} className='right-forum' />
         <div className='forum__title'>Foro</div>
         <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-          nonummy nibh euismod tincidunt ut laoreet.
+          Próximamente tendremos foros de discusión para que los estudiantes puedan compartir sus experiencias y ayudarse colabroativamente.
         </p>
         <button className='forum__btn'>Ingresa</button>
       </div>
