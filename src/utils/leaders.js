@@ -1,4 +1,4 @@
-//import img1 from '../assets/jpg/img1.jpg';
+import img1 from '../assets/jpg/img1.jpg';
 //Acá arriba se pone la direccipn de las imagenes sino se pone se pondrá el imagen por default
 let leaders = [
   {
@@ -15,7 +15,7 @@ let leaders = [
   },
   {
     id: 4,
-    src: null,
+    src: img1
     name: 'Miguel Jimeno',
     details: 'Profesor asociado del departamento de Ing. de Sistemas',
   },
