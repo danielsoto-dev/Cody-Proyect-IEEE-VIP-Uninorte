@@ -10,10 +10,7 @@ export default function AboutUs() {
         <img alt='' src={purpleAboutUs} className='purple-about-us' />
         <img alt='' src={codySvg} className='about-us__img' />
         <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-          volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-          ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Este es un proyecto en conjunto entre IEEE y Uninorte con caracter social que busca hacer impacto en los estudiantes de colegio y de universidad.
         </p>
       </div>
     </section>
